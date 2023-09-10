@@ -3,8 +3,8 @@ from functools import wraps
 
 
 def func_decorator(func):
-    # Функция обёртка.
     def wrapper(*args, **kwargs):
+        """Функция обёртка."""
         print("----before----")
         res = func(*args, **kwargs)
         print("----after----")
@@ -25,8 +25,7 @@ res = f("python")
 print()
 
 
-# Декорировать функцию можно проще.
-@func_decorator
+@func_decorator  # Декорировать функцию можно проще.
 def some_func2(title):
     res = "title: " + str(title)
     print(res)
@@ -37,11 +36,9 @@ res2 = some_func2("java")
 print()
 
 
-# В декоратор можно передавать параметры.
-def decorator(dx=0.01):
+def decorator(dx=0.01):  # В декоратор можно передавать параметры.
     def diff(func):
-        # Данный декоратор нужен для того, чтобы имя и описание брались у передаваемой функции func.
-        @wraps(func)
+        @wraps(func)  # Данный декоратор нужен для того, чтобы имя и описание брались у передаваемой функции func.
         def wrapper(x, *args, **kwargs):
             # Расчёт производной в точке.
             return (func(x + dx, *args, **kwargs) - func(x, *args, **kwargs)) / dx

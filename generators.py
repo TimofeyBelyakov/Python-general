@@ -13,8 +13,9 @@ except StopIteration as err:
     print(f"Error: {err.__class__}")
 
 
-# Функция генератор.
 def func_gen():
+    """Функция генератор."""
+
     global numbers
     for x in numbers:
         yield x
