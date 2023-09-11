@@ -21,7 +21,7 @@ def sin_func(x):
 
 
 df_sin = Derivate(sin_func)
-print(df_sin(math.pi / 3))
+print(df_sin(math.pi / 3))  # 0.499995669867026
 
 
 @Derivate  # с помощью функторов можно создавать декораторы
@@ -30,4 +30,4 @@ def df_sin_func(x):
 
 
 # Производная в точке.
-print(df_sin_func(math.pi / 3))
+print(df_sin_func(math.pi / 3))  # 0.499995669867026

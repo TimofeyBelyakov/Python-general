@@ -19,8 +19,8 @@ exm = Color("red")
 # экземпляра, а в пространстве класса.
 exm.color = "yellow"
 exm.__dict__["color"] = "black"
-print(exm.color)
-print(exm.__dict__, "\n")
+print(exm.color)  # yellow
+print(exm.__dict__, "\n")  # {'_Color__color': 'yellow', 'color': 'black'}
 
 
 class Color:
@@ -40,4 +40,4 @@ class Color:
 
 c = Color("green")
 c.color = "pink"
-print(c.color)
+print(c.color)  # pink

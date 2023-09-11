@@ -36,8 +36,8 @@ pt.x = 5
 pt.z = 88
 
 print()
-print(pt.y)
-print(pt.z)
+print(pt.y)  # set _x = 5
+print(pt.z)  # set _z = 88
 
 print()
-print(pt.__dict__)
+print(pt.__dict__)  # {'_x': 5, '_y': 2, '_z': 88}

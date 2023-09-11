@@ -12,9 +12,9 @@ class Point:
         return Point.attr + x
 
 
-print(Point.func(1))
-print(Point.func2(2))
+print(Point.func(1))  # 6
+print(Point.func2(2))  # 7
 
 a = Point()
-print(a.func(3))
-print(a.func2(4))
+print(a.func(3))  # 8
+print(a.func2(4))  # 9
